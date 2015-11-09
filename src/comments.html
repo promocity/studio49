@@ -1,0 +1,132 @@
+<html>
+  <head lang="ru">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>    
+    <meta charset="UTF-8">
+    <title>Studio 49 | Комментарии</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css?v=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="body-wr">
+    //= template/header.html
+
+        <div class="content-wr">
+			//= template/aside.html
+          
+          <section class="main-content comments-section">
+              <h1>отзывы</h1>
+              <div class="comment-tabbed-panels">
+                <a class="theme-head" href="#theme1">Обслуживание в ресторане</a>
+                <a class="theme-head" href="#theme2">Сервис доставки</a>
+                <a class="theme-head" href="#theme3">Качество блюд</a>                
+              </div>
+              
+              <div class="theme-wr" id="theme1">
+                <div class="comment">
+                  <p class="comment-author">Патрушева Мария Николаевна</p>
+                  <p class="comment-article">Тема отзыва: <span>Горячие блюда</span></p>
+                  <div class="stars-1"></div>
+                  <p class="comment-text">Это что-то невероятное !!! Раньше был у них постоянным гостем, когда они были ещё на Малышева-Восточной, потом на полгода потерял их из виду, но как-то случайно проезжая по Куйбышева случайно увидел вывеску "Югославия"...) Заезжаю теперь регулярно, особенно в дни после тренировок, когда аппетит просто зверский...) Всегда беру на тарелке, так как в виде бургера есть не очень удобно. Обычно беру "Плескавицу для гурманов", но иногда пробую что-то новое. В общем, там вкусно всё !!! 
+  Рекомендую всем !!!</p>
+                </div>
+                <div class="comment">
+                  <p class="comment-author">Патрушева Мария Николаевна</p>
+                  <p class="comment-article">Тема отзыва: <span>Горячие блюда</span></p>
+                  <div class="stars-2"></div>
+                  <p class="comment-text">Это что-то невероятное !!! Раньше был у них постоянным гостем, когда они были ещё на Малышева-Восточной, потом на полгода потерял их из виду, но как-то случайно проезжая по Куйбышева случайно увидел вывеску "Югославия"...) Заезжаю теперь регулярно, особенно в дни после тренировок, когда аппетит просто зверский...) Всегда беру на тарелке, так как в виде бургера есть не очень удобно. Обычно беру "Плескавицу для гурманов", но иногда пробую что-то новое. В общем, там вкусно всё !!! 
+  Рекомендую всем !!!</p>
+                </div>
+                <form class="your-comment" id="form-theme-1" action="comments-send.html" method="post">
+                  <h2 class="your-comment-head">Оставьте свой отзыв</h2>
+                  <div class="form-stars-1"></div>
+                  <input class="name  required" type="text" name="name" placeholder="Имя или псевдоним">
+                  <select class="comment-theme  required" name="theme" size="1" title="Пожалуйста выберете тему сообщения.">
+                    <option value="" selected="selected">Тема сообщения</option>          
+                    <option value="Тема сообщения 1">Тема сообщения 1</option>
+                    <option value="Тема сообщения 2">Тема сообщения 2</option>
+                    <option value="Тема сообщения 3">Тема сообщения 3</option>
+                  </select>
+                  <textarea class="message required" name="message" id="message" cols="20" rows="3" placeholder="Сообщение"></textarea>
+                  <button class="write" id="write" type="submit">Написать</button>
+                </form>                
+              </div><!-- close theme-wr -->
+
+              <div class="theme-wr" id="theme2">
+                <div class="comment">
+                  <p class="comment-author">Патрушева Мария Николаевна</p>
+                  <p class="comment-article">Тема отзыва: <span>Горячие блюда</span></p>
+                  <div class="stars-0"></div>
+                  <p class="comment-text">Это что-то невероятное !!! Раньше был у них постоянным гостем, когда они были ещё на Малышева-Восточной, потом на полгода потерял их из виду, но как-то случайно проезжая по Куйбышева случайно увидел вывеску "Югославия"...) Заезжаю теперь регулярно, особенно в дни после тренировок, когда аппетит просто зверский...) Всегда беру на тарелке, так как в виде бургера есть не очень удобно. Обычно беру "Плескавицу для гурманов", но иногда пробую что-то новое. В общем, там вкусно всё !!! 
+  Рекомендую всем !!!</p>
+                </div>
+                <div class="comment">
+                  <p class="comment-author">Патрушева Мария Николаевна</p>
+                  <p class="comment-article">Тема отзыва: <span>Горячие блюда</span></p>
+                  <div class="stars-5"></div>
+                  <p class="comment-text">Это что-то невероятное !!! Раньше был у них постоянным гостем, когда они были ещё на Малышева-Восточной, потом на полгода потерял их из виду, но как-то случайно проезжая по Куйбышева случайно увидел вывеску "Югославия"...) Заезжаю теперь регулярно, особенно в дни после тренировок, когда аппетит просто зверский...) Всегда беру на тарелке, так как в виде бургера есть не очень удобно. Обычно беру "Плескавицу для гурманов", но иногда пробую что-то новое. В общем, там вкусно всё !!! 
+  Рекомендую всем !!!</p>
+                </div>
+                <form class="your-comment" id="form-theme-2" action="comments-send.html" method="post">
+                  <h2 class="your-comment-head">Оставьте свой отзыв</h2>
+                  <div class="form-stars-2"></div>
+                  <input class="name  required" type="text" name="name" placeholder="Имя или псевдоним">
+                  <select class="comment-theme  required" name="theme" size="1" title="Пожалуйста выберете тему сообщения.">
+                    <option value="" selected="selected">Тема сообщения</option>          
+                    <option value="Тема сообщения 1">Тема сообщения 1</option>
+                    <option value="Тема сообщения 2">Тема сообщения 2</option>
+                    <option value="Тема сообщения 3">Тема сообщения 3</option>
+                  </select>
+                  <textarea class="message required" name="message" id="message" cols="20" rows="3" placeholder="Сообщение"></textarea>
+                  <button class="write" id="write" type="submit">Написать</button>
+                </form>                
+              </div><!-- close theme-wr -->
+
+              <div class="theme-wr" id="theme3">
+                <div class="comment">
+                  <p class="comment-author">Патрушева Мария Николаевна</p>
+                  <p class="comment-article">Тема отзыва: <span>Горячие блюда</span></p>
+                  <div class="stars-3"></div>
+                  <p class="comment-text">Это что-то невероятное !!! Раньше был у них постоянным гостем, когда они были ещё на Малышева-Восточной, потом на полгода потерял их из виду, но как-то случайно проезжая по Куйбышева случайно увидел вывеску "Югославия"...) Заезжаю теперь регулярно, особенно в дни после тренировок, когда аппетит просто зверский...) Всегда беру на тарелке, так как в виде бургера есть не очень удобно. Обычно беру "Плескавицу для гурманов", но иногда пробую что-то новое. В общем, там вкусно всё !!! 
+  Рекомендую всем !!!</p>
+                </div>
+                <div class="comment">
+                  <p class="comment-author">Патрушева Мария Николаевна</p>
+                  <p class="comment-article">Тема отзыва: <span>Горячие блюда</span></p>
+                  <div class="stars-4"></div>
+                  <p class="comment-text">Это что-то невероятное !!! Раньше был у них постоянным гостем, когда они были ещё на Малышева-Восточной, потом на полгода потерял их из виду, но как-то случайно проезжая по Куйбышева случайно увидел вывеску "Югославия"...) Заезжаю теперь регулярно, особенно в дни после тренировок, когда аппетит просто зверский...) Всегда беру на тарелке, так как в виде бургера есть не очень удобно. Обычно беру "Плескавицу для гурманов", но иногда пробую что-то новое. В общем, там вкусно всё !!! 
+  Рекомендую всем !!!</p>
+                </div>
+                <form class="your-comment" id="form-theme-3" action="comments-send.html" method="post">
+                  <h2 class="your-comment-head">Оставьте свой отзыв</h2>
+                  <div class="form-stars-3"></div>
+                  <input class="name  required" type="text" name="name" placeholder="Имя или псевдоним">
+                  <select class="comment-theme  required" name="theme" size="1" title="Пожалуйста выберете тему сообщения.">
+                    <option value="" selected="selected">Тема сообщения</option>          
+                    <option value="Тема сообщения 1">Тема сообщения 1</option>
+                    <option value="Тема сообщения 2">Тема сообщения 2</option>
+                    <option value="Тема сообщения 3">Тема сообщения 3</option>
+                  </select>
+                  <textarea class="message required" name="message" id="message" cols="20" rows="3" placeholder="Сообщение"></textarea>
+                  <button class="write" id="write" type="submit">Написать</button>
+                </form>                
+              </div><!-- close theme-wr -->              
+
+
+
+          </section>
+        </div>
+
+    
+    
+      //= template/footer.html
+
+    <script src="js/main.js"></script> 
+  </div>
+  </body>
+  </html>

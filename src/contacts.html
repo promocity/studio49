@@ -1,0 +1,56 @@
+<html>
+  <head lang="ru">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>    
+    <meta charset="UTF-8">
+    <title>Studio 49 | Контакты</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css?v=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="body-wr">
+        //= template/header.html
+        <div class="content-wr">
+			//= template/aside.html
+          
+          <section class="main-content job-section">
+            <h1 class="job-head">Контакты</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2185.5783384649!2d60.534708293511194!3d56.784542214685075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16f50c9ff6ab5%3A0x36a594f37e65d3ec!2z0YPQuy4g0JrRgNCw0YHQvdC-0LvQtdGB0YzRjywgNDksINCV0LrQsNGC0LXRgNC40L3QsdGD0YDQsywg0KHQstC10YDQtNC70L7QstGB0LrQsNGPINC-0LHQuy4sIDYyMDAxNg!5e0!3m2!1sru!2sru!4v1446442273208" frameborder="0" style="border: 4px solid #d5251c" allowfullscreen></iframe>
+            <form class="contacts-form" id="contacts-form" action="contacts-send.html" method="post">
+              <input class="contacts-form-input  required" type="text" name="name" placeholder="ФИО">
+              <input class="contacts-form-input  required" id="contacts-tel" type="text" name="tel" placeholder="+7 (...) ....-...">
+              <button class="contacts-callback" type="submit">Заказать обратный звонок</button>
+            </form>
+            <div class="contact-links">
+              <div class="contact-link-wr  contacts-page-tel">
+                <a href="tel:+73432565989">+7 (343) 256-59-89</a>                
+              </div>
+              <div class="contact-link-wr  contacts-page-tel">
+                <a href="tel:+73433567845">+7 (343) 356-78-45</a>                
+              </div>              
+              <div class="contact-link-wr  contacts-page-address">
+                <a href="#">Екатеринбург, ул. Краснолесья, 49</a>               
+              </div>              
+              <div class="contact-link-wr  contacts-page-mail">
+                <a href="mailto:info@studio49.ru">info@studio49.ru</a>                 
+              </div>
+         
+            </div>
+
+
+          </section>
+        </div>
+
+      //= template/footer.html
+
+
+   
+    <script src="js/main.js"></script>
+  </div>
+  </body>
+  </html>
