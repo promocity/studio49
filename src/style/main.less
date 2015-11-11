@@ -296,8 +296,7 @@ ul {
   -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.35);
   -moz-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.35);
   box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.35);
-  top: 42%;
-  left: 29%;
+  margin: 94px 0 0 -420px;
 }
 
 .items-in-basket {
@@ -639,6 +638,103 @@ ul {
   width: 300px;
   margin: 0 15px 75px 15px;
 }
+
+.pop-up-item {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.7s ease;
+  transition-delay: 0.2s;
+  position: absolute;
+  background: #fff;
+  z-index: 10;
+  width: 505px;
+  overflow: hidden;
+  padding: 30px 0;
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.35);
+  -moz-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.35);
+  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.35);
+  top: 0;
+}
+
+.pop-up-item-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 290px;
+  margin-bottom: 18px;
+  padding: 0 30px;
+}
+
+.gallery-item-small {
+  width: 128px;
+  height: 128px;
+}
+
+.gallery-small-wr {
+  width: 128px;
+  height: 295px;
+}
+
+.gallery-small-wr img:first-of-type {
+  margin-bottom: 35px;
+}
+
+.gallery-item-small img {
+   width: 128px;
+  height: 128px;
+}
+
+.gallery-item-big {
+  width: 295px;
+  height: 295px;
+}
+
+.pop-up-text-part {
+  padding: 0 30px;
+}
+
+.pop-up-item-name {
+  font: 23px OpenSansSemiBold, sans-serif;
+  color: #000;
+  margin-bottom: 18px;
+}
+
+.pop-up-item-descr {
+  font: 18px OpenSansLight, sans-serif;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.pop-up-item-price {
+  font: 35px OpenSansSemiBold, sans-serif;
+  color: #000;
+}
+
+.pop-up-item-order {
+  float: right;
+  font: 20px OpenSansSemiBold, sans-serif;
+  color: #d81312;
+  border: 2px solid #d81312;
+  padding: 12px 29px;
+  margin-top: -30px;
+}
+
+.pop-up-item-order:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .stock,
 .hit,
@@ -1513,26 +1609,26 @@ iframe {
 
 .product-preview {
   float: left;
-  width: 650px;
+  width: 580px;
   height: 720px;
 }
 
 .product-big {
-  width: 650px;
-  height: 500px;
+  width: 580px;
+  height: 420px;
   overflow: hidden;
   margin-bottom: 45px;
 }
 
 .product-big img {
-  width: 650px;
-  height: 500px;
+  width: 580px;
+  height: 420px;
 }
 
 .product-small {
   float: left;
-  width: 300px;
-  height: 165px;
+  width: 280px;
+  height: 150px;
   overflow: hidden;
 }
 
@@ -1548,8 +1644,8 @@ iframe {
 .product-descr {
   float: right;
   vertical-align: top;
-  width: 750px;
-  padding: 0 20px;
+  width: 730px;
+  padding: 0 10px;
 }
 
 .descr-text {

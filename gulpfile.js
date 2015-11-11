@@ -15,21 +15,21 @@ var gulp = require('gulp'),
     reload = browserSync.reload;
 
 var path = {
-  build: { // Г’ГіГІ Г¬Г» ГіГЄГ Г¦ГҐГ¬ ГЄГіГ¤Г  Г±ГЄГ«Г Г¤Г»ГўГ ГІГј ГЈГ®ГІГ®ГўГ»ГҐ ГЇГ®Г±Г«ГҐ Г±ГЎГ®Г°ГЄГЁ ГґГ Г©Г«Г»
+  build: { // Тут мы укажем куда складывать готовые после сборки файлы
   html: 'build/',
   js: 'build/js/',
   css: 'build/css/',
   img: 'build/img/',
   fonts: 'build/fonts'
   },
-  src: { // ГЏГіГІГЁ Г®ГІГЄГіГ¤Г  ГЎГ°Г ГІГј ГЁГ±ГµГ®Г¤Г­ГЁГЄГЁ
+  src: { // Пути откуда брать исходники
     html: 'src/*.html',
     js: 'src/js/main.js',
     style: 'src/style/main.less',
     img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*'    
   },
-  watch: {  // Г’ГіГІ Г¬Г» ГіГЄГ Г¦ГҐГ¬, Г§Г  ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГҐГ¬ ГЄГ ГЄГЁГµ ГґГ Г©Г«Г®Гў Г¬Г» ГµГ®ГІГЁГ¬ Г­Г ГЎГ«ГѕГ¤Г ГІГј
+  watch: {  // Тут мы укажем, за изменением каких файлов мы хотим наблюдать
     html: 'src/**/*.html',
     js: 'src/js/**/*.js',
     style: 'src/style/**/*.less',
@@ -50,40 +50,40 @@ var config = {
 };
 
 gulp.task('html:build', function () {
-  gulp.src(path.src.html) // вЂљГ»ГЎГҐГ°ГҐГ¬ ГґГ Г©Г«Г» ГЇГ® Г­ГіГ¦Г­Г®Г¬Гі ГЇГіГІГЁ
-    .pipe(rigger()) // ВЏГ°Г®ГЈГ®Г­ГЁГ¬ Г·ГҐГ°ГҐГ§ rigger
-    .pipe(gulp.dest(path.build.html)) // вЂљГ»ГЇГ«ГѕГ­ГҐГ¬ ГЁГµ Гў ГЇГ ГЇГЄГі build
-    .pipe(reload({ stream: true })); // Л† ГЇГҐГ°ГҐГ§Г ГЈГ°ГіГ§ГЁГ¬ Г­Г Гё Г±ГҐГ°ГўГҐГ° Г¤Г«Гџ Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГ©
+  gulp.src(path.src.html) // ‚ыберем файлы по нужному пути
+    .pipe(rigger()) // Џрогоним через rigger
+    .pipe(gulp.dest(path.build.html)) // ‚ыплюнем их в папку build
+    .pipe(reload({ stream: true })); // € перезагрузим наш сервер длЯ обновлений
 });
 
 gulp.task('js:build', function() {
-  gulp.src(path.src.js) // ВЌГ Г©Г¤ГҐГ¬ Г­Г Гё main ГґГ Г©Г«
-    .pipe(rigger()) // ВЏГ°Г®ГЈГ®Г­ГЁГ¬ Г·ГҐГ°ГҐГ§ rigger
-    .pipe(sourcemaps.init()) // Л†Г­ГЁГ¶ГЁГ Г«ГЁГ§ГЁГ°ГіГҐГ¬ sourcemap
-    .pipe(uglify()) // вЂГ®Г¦Г¬ГҐГ¬ Г­Г Гё js
-    .pipe(sourcemaps.write()) // ВЏГ°Г®ГЇГЁГёГҐГ¬ ГЄГ Г°ГІГ»
-    .pipe(gulp.dest(path.build.js)) // вЂљГ»ГЇГ«ГѕГ­ГҐГ¬ ГЈГ®ГІГ®ГўГ»Г© ГґГ Г©Г« Гў build
-    .pipe(reload ({ stream: true })); // Л† ГЇГҐГ°ГҐГ§Г ГЈГ°ГіГ§ГЁГ¬ Г±ГҐГ°ГўГҐГ°
+  gulp.src(path.src.js) // Ќайдем наш main файл
+    .pipe(rigger()) // Џрогоним через rigger
+    .pipe(sourcemaps.init()) // €нициализируем sourcemap
+    .pipe(uglify()) // ‘ожмем наш js
+    .pipe(sourcemaps.write()) // Џропишем карты
+    .pipe(gulp.dest(path.build.js)) // ‚ыплюнем готовый файл в build
+    .pipe(reload ({ stream: true })); // € перезагрузим сервер
 });
 
 gulp.task('style:build', function() {
-  gulp.src(path.src.style) // вЂљГ»ГЎГҐГ°ГҐГ¬ Г­Г Гё main.scss
-    .pipe(sourcemaps.init()) // вЂ™Г® Г¦ГҐ Г±Г Г¬Г®ГҐ Г·ГІГ® ГЁ Г± js
-    .pipe(less()) // вЂГЄГ®Г¬ГЇГЁГ«ГЁГ°ГіГҐГ¬
+  gulp.src(path.src.style) // ‚ыберем наш main.scss
+    .pipe(sourcemaps.init()) // ’о же самое что и с js
+    .pipe(sass()) // ‘компилируем
     .pipe(prefixer({
       browsers: ['last 999 versions'],
       cascade: false
-    })) // вЂћГ®ГЎГ ГўГЁГ¬ ГўГҐГ­Г¤Г®Г°Г­Г»ГҐ ГЇГ°ГҐГґГЁГЄГ±Г»
-     .pipe(cssmin()) // вЂГ®Г¦Г¬ГҐГ¬
+    })) // „обавим вендорные префиксы
+    .pipe(cssmin()) // ‘ожмем
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(path.build.css)) // Л† Гў build
+    .pipe(gulp.dest(path.build.css)) // € в build
     .pipe(reload({ stream: true }));
 });
 
 gulp.task('image:build', function() {
-  gulp.src(path.src.img) // вЂљГ»ГЎГҐГ°ГҐГ¬ Г­Г ГёГЁ ГЄГ Г°ГІГЁГ­ГЄГЁ
-    .pipe(imagemin())
-    .pipe(gulp.dest(path.build.img)) // Л† ГЎГ°Г®Г±ГЁГ¬ Гў build
+  gulp.src(path.src.img) // ‚ыберем наши картинки
+    
+    .pipe(gulp.dest(path.build.img)) // € бросим в build
     .pipe(reload({ stream: true }));
 });
 

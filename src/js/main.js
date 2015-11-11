@@ -29,20 +29,18 @@ $(document).ready(function(){
     closeEffect : 'none'
   });
 
-  /* index.html
-  $('.aside-nav a').click(function() {
-    var $this = $(this);    // save $(this) in a variable for efficiency
-    $('.panel').hide();     // hide panels
-    $('.aside-nav a.active').removeClass('active');
-    $this.addClass('active').blur();        // add active state to new tab
-    var panel = $this.attr('href');       // retrieve href from link (is id of panel to display)
-    $(panel).fadeIn(250);       // show panel
-    $('.index-content').hide();
-    return(false);        // don't follow link down page
-  }); // end click
+  /* index.html */
+  /*
+  $('.offers-item-img').mouseenter(function(){
+    $(this).next('.pop-up-item').css({ "visibility": "visible", "opacity": "1" });
+  });
 
-  // $('.aside-nav a:first').click();
- */
+ $('.pop-up-item').mouseleave(function(){
+   $('.pop-up-item').css({ "visibility": "hidden", "opacity": "0" });
+ });
+  */
+
+
   /* comments.html */
   $('.stars-0').raty({
     readOnly: true,
